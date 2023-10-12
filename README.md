@@ -1,36 +1,42 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Exchange Listing Tables HW
 
-## Getting Started
+This is a Next.js application that fetches and displays cryptocurrency exchange data in two tables. The data is server-side rendered (SSR) and styled using the shadcn/ui library with Tailwind CSS.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- Displays a table of transactions data with a calculated euro equivalent for each transaction's amount.
+- Displays a summary table of the amounts of all deposits & withdrawals grouped by currency.
+- Handles cases where euro rates are not available.
+- Uses TypeScript for static type checking.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Technologies Used
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **Framework**: Next.js
+- **UI Library**: shadcn/ui
+- **Styling**: Tailwind CSS
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+The choice of Next.js as the framework is due to its modern capacities to work well as a boilerplate and excellent TypeScript support, which helps ensure type safety and catch errors early during development.
 
-## Learn More
+The shadcn/ui library was chosen for its simplicity and ease of use. It provides a set of reusable UI components that can be used to quickly build the user interface.
 
-To learn more about Next.js, take a look at the following resources:
+Tailwind CSS was chosen for styling due to its utility-first approach, which allows for rapid development and reduces the amount of CSS that needs to be written.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Local Development Setup
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+1. **Clone the Repository**: Clone the project repository to your local machine.
+2. **Install Dependencies**: Navigate to the project directory and run `npm install`.
+3. **Start the Development Server**: Run `npm run dev`.
+4. **Access the Application**: Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to access the application.
 
-## Deploy on Vercel
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Assumptions and Pitfalls
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- The application does not paginate the data or implement infinite scrolling / doing table virtualization. If the dataset is very large, this could lead to performance issues.
+- The application does not cache the data. If the data doesn't change frequently, caching could improve performance by reducing unnecessary API calls.
+- The application does not have unit or integration tests. This makes it harder to catch regressions or errors before they reach production.
+
+## Future Improvements
+
+- Add pagination or infinite scrolling or table virtualization for handling large datasets.
+- Implement data caching for frequently unchanged data to reduce unnecessary API calls.
+- Add unit and integration tests to catch regressions or errors before they reach production.
