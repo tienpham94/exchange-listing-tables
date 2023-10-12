@@ -26,7 +26,8 @@ Tailwind CSS was chosen for styling due to its utility-first approach, which all
 1. **Clone the Repository**: Clone the project repository to your local machine.
 2. **Install Dependencies**: Navigate to the project directory and run `npm install`.
 3. **Start the Development Server**: Run `npm run dev`.
-4. **Access the Application**: Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to access the application.
+4. **Start the web server** accompanying this project on port 8080.
+5. **Access the Application**: Open your browser and navigate to [http://localhost:3000](http://localhost:3000) to access the application.
 
 
 ## Assumptions and Pitfalls
